@@ -1,0 +1,52 @@
+.soc-network {
+    text-align: center;
+    @media screen and (max-width: 767px) {      
+        margin-top: 60px;
+        margin-bottom: 60px;        
+    }
+    @media screen and (min-width: 1200px) {      
+        margin-left: 70px;
+        text-align: start;        
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: var(--white-color);
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-item:not(:last-child) {
+        margin-right: 10px;
+    }
+    &-link {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        color: #afb1b8;
+        transition:
+            background-color 300ms linear, color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 300ms linear, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
+

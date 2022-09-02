@@ -1,0 +1,93 @@
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    @media screen and (min-width: 768px) {       
+        justify-content: start;       
+    }
+}
+
+.projects-item {
+    width: 100%;
+    @media screen and (min-width: 768px) {      
+        flex-basis: calc((100% - 30px) / 2);        
+    }
+    @media screen and (min-width: 1200px) {     
+        flex-basis: 370px;        
+    }
+}
+
+.projects-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    flex-basis: calc((100% - 60px) / 2);
+    transition: 
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        box-shadow: 
+            0px 1px 1px rgba(0, 0, 0, 0.12), 
+            0px 4px 4px rgba(0, 0, 0, 0.06), 
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    &:hover .projects-top-wrap-text,
+    &:focus .projects-top-wrap-text {
+        transform: translateY(0%);
+    }
+}
+
+.projects-top-wrap {
+    position: relative;
+    overflow: hidden;
+    &-text {
+        position: absolute;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        height: 100%;
+        color: #fff;
+        background-color: rgba(33, 149, 243, 0.7882352941);
+        padding: 63px 24px;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        transform: translateY(100%);
+        transition: 
+            transform 400ms cubic-bezier(0.4, 0, 0.2, 1), 
+            transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.projects-text {
+    padding: 20px 24px;
+}
+
+.border {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    flex-grow: 1;
+}
+
+.projects-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color);
+    margin-bottom: 4px;
+}
+
+.projects-after-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--other-row-color);
+}
